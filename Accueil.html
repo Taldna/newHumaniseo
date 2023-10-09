@@ -1,0 +1,74 @@
+<head>
+    <title>Accueil - Humaniseo</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/En-tête.css">
+    <link rel="stylesheet" type="text/css" href="./css/Accueil.css">
+    <script src="./js/fonctions.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="Accueil.html"><img src="images/humaniseo_logo.png"/></a>
+        <nav>
+            <ul>
+                <li><a href="Accueil.html">Accueil</a></li>
+                <li><a href="Nos projets.html">Nos projets</a></li>
+                <li><a href="Catalogue d'aides.html">Catalogue d'aides</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="A propos.html">A propos</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article id="close">
+                <img src="images/lcr_logo.png"/>
+                <h1>La Course aux Rêves 2023</h1>
+                <button class="bouton_lcr"><a href="https://www.billetweb.fr/course-aux-reves">Inscription</a></button>
+                <button id="bouton_depliant" onclick="deroulement()"><img src="images/bouton_depliant.png"></button>
+            </article>
+            <article id="open">
+                <img src="images/lcr_logo.png"/>
+                <h1>La Course aux Rêves 2023</h1>
+                <p>
+                    La Course aux Rêves est de retour pour sa cinquième édition !<br>
+                    Elle se déroulera le 14 mai 2023 au parc du Lac de Maine et sera au profit de l’association Rêves. Au programme : une color run, un spectacle 
+                    d’hypnose, une buvette et pleins d’autres activités.
+                </p>
+                <button class="bouton_lcr"><a href="https://www.billetweb.fr/course-aux-reves">Inscription</a></button>
+                <button id="bouton_depliant" onclick="enroulement()"><img src="images/bouton_pliant.png"></button>
+            </article>
+        </section>
+    </header>
+    <section class="conteneur">
+        <h1>Accueil</h1>
+        <section id="accueil">
+            <section class="element e1">
+                <h2>Les paniers de fruits et légumes</h2>
+                <p>
+                    Les étudiants et l’administration de l’ESEO peuvent commander des paniers de fruits et légumes pour 10 € avant chaque mardi soir et 
+                    être livré le jeudi.
+                </p>
+                <section id="panier">
+                    <button class="bouton"><a href="https://www.panieracroquer.fr/categorie-produit/paniers-pre-remplis/">Commander</a></button>
+                    <img src="images/mon_panier_a_croquer_logo.jpeg"/>
+                </section>
+            </section>
+            <section class="element">
+                <h2>Activités avec Simon de Cyrène</h2>
+                <img src="images/simon_de_cyrene.jpg"/>
+                <p>
+                    Des personnes en situation d’handicap et des étudiants se réunissent pour faire des jeux de société, de la cuisine, des sorties en 
+                    centre-ville ou d’autre activité encore.
+                </p>
+            </section>
+            <section class="element">
+                <h2>Collecte de vêtements</h2>
+                <img src="images/frip_etud_logo.png" style="width:146px;height:146px;"/>
+                <p>
+                    Du 6 février au 2 mars, les étudiants et l’administration de l’ESEO peuvent déposer les vêtements qu’ils ne portent plus. Ils 
+                    seront redonnés à l’association Frip’étud qui les revendra à petits prix lors d’une friperie à l’UCO accessible à tous. Tout 
+                    l’argent récolté sera reversé à l’association Médecins sans frontières.
+                </p>
+            </section>
+        </section>
+    </section>
+</body>

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* Programme issu de "Prototype - Accueil" */
+
+/* 
+Les éléments sont flexibles et se justifient entre eux en fonction de la largeur de la fenêtre.
+Un élément contient plusieurs composants (titre, image et texte) qui sont disposés dans un tableau.
+Chaque élément peut être réadapté à ses besoins comme pour e1 (si il est toujours présent).
+*/
+
+#accueil{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#accueil .element{
+    display: grid;
+    width: 450px;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: max-content max-content max-content max-content;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#accueil .element h2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 25px;
+    margin: 0px;
+    text-align: center;
+}
+
+#accueil .element img{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 200px;
+    margin-top: 7px;
+    justify-self: center;
+}
+
+#accueil .element p{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 20px;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+#accueil .e1 #panier{
+    grid-column: 1/4;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#accueil .e1 #panier .bouton{
+    grid-row: 4/5;
+    display: inline-block;
+    font-size: 15px;
+    background-color: #8d3745;
+    border: 2px solid #8d3745;
+    border-radius: 7px;
+    width: max-content;
+    height: max-content;
+    padding: 16px;
+    margin-top: 10px;
+    justify-self: center;
+    align-self: center;
+}
+
+#accueil .e1 #panier .bouton a{
+    color: white;
+}
+
+#accueil .e1 #panier .bouton a:hover{
+    text-decoration: underline;
+}
+
+#accueil .e1 #panier img{
+    grid-row: 4/5;
+}

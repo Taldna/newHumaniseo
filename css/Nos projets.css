@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* Programme issu de "Prototype - Nos projets - Flex wrap" */
+
+/* 
+Les articles sont flexibles et se justifient entre eux en fonction de la largeur de la fenêtre.
+Un article contient plusieurs composants (titre, date, image et texte) qui sont disposés dans un tableau.
+*/
+
+#articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#articles .article{
+    display: grid;
+    width: 450px;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: max-content max-content max-content max-content;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#articles .article h2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 25px;
+    margin: 0px;
+    text-align: center;
+}
+
+#articles .article em{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#articles .article img{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    height: 200px;
+    margin-top: 5px;
+    justify-self: center;
+}
+
+#articles .article aside{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    margin: 0px;
+    margin-top : 5px;
+}
+
+#articles .article aside p{
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 20px;
+    margin: 0px;
+    margin-top: 5px;
+}

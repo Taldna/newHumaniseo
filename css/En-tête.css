@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/* Programme issu de "Prototype - En-tête - Sobre" */
+
+/* 
+L'en-tête est constitué du logo humaniseo,
+d'une barre de navigation horizontale centrée dont les liens sont flexibles et se justifient entre eux en fonction de la largeur de la fenêtre.
+et d'un pop-up LCR dépliable.
+*/
+
+body{
+    margin: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* BANDEAU */
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+header a{
+    display: flex;
+    justify-content: center;
+}
+
+header a img {
+    width: 200px;
+    margin: 10px;
+    padding: 0px;
+}
+
+header nav{
+    background-color: #8d3745;
+    margin: 0px;
+    padding: 0px;
+}
+
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding : 10px 0px 10px 0px;
+}
+
+nav li{
+    padding: 0px 50px 0px 50px;
+    /* padding: 3px;
+    padding-right: 30px; */
+}
+
+header nav a{
+    color: white;
+    font-size: 15px;
+    font-weight:bold;
+}
+
+header nav a:hover{
+    text-decoration-line: underline;
+}
+
+/* POP-UP LCR */
+
+header section{
+    position: sticky;
+    top: 136px;
+    background-image: linear-gradient(#fc5c00,#e327ff);
+}
+
+#close{
+    display: grid;
+    grid-template-columns: max-content max-content max-content 1fr;
+    grid-template-rows: max-content 0px;
+}
+
+#close img{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 5px;
+    margin-left: 15px;
+    margin-right: 0px;
+    width: 25px;
+    height: 25px;
+    align-self:center;
+}
+
+#close h1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: white;
+    font-size: 20px;
+    margin: 0px;
+    margin-left: 25px;
+    align-self:center;
+}
+
+#close .bouton_lcr{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-image: linear-gradient(#fc5c00,#e327ff);
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 3px;
+    align-self:center;
+    margin-left: 25px;
+}
+
+#close .bouton_lcr a{
+    color: white;
+    font-size: 15px;
+    font-weight:bold;
+}
+
+#close .bouton_lcr a:hover{
+    text-decoration: underline;
+}
+
+#close #bouton_depliant{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    background-color: #e327ff;
+    border-style: unset;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    align-self: end;
+    justify-self: center;
+    padding: 0px;
+    margin-bottom: -15px;
+}
+
+#close #bouton_depliant img{
+    width: 15px;
+    height: 15px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin: 0px;
+    margin-top: -3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 3px;
+}
+
+#close #bouton_depliant img:hover{
+    width: 20px;
+    height: 20px;
+    margin-top: -4px;
+    padding-left: 3.5px;
+    padding-right: 3.5px;
+    margin-bottom: -4px;
+}
+
+#open{
+    display: none;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: max-content max-content 0px;
+}
+
+#open img{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin: 10px;
+    margin-left: 15px;
+    margin-right: 0px;
+    width: 100px;
+    height: 100px;
+    align-self:center;
+    justify-self: center;
+}
+
+#open h1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: white;
+    font-size: 20px;
+    margin: 0px;
+    margin-top: 10px;
+    text-align: center;
+    align-self:center;
+}
+
+#open p{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: white;
+    margin: 5px;
+    margin-left: 25px;
+}
+
+#open .bouton_lcr{
+    grid-column: 3/4;
+    grid-row: 1/3;
+    width: max-content;
+    background-image: linear-gradient(#fc5c00,#e327ff);
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 3px;
+    align-self:center;
+    justify-content: center;
+}
+
+#open .bouton_lcr a{
+    color: white;
+    font-size: 15px;
+    font-weight:bold;
+}
+
+#open .bouton_lcr a:hover{
+    text-decoration: underline;
+}
+
+#open #bouton_depliant{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    background-color: #e327ff;
+    border-style: unset;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    align-self: end;
+    justify-self: center;
+    padding: 0px;
+    margin-bottom: -15px;
+}
+
+#open #bouton_depliant img{
+    width: 15px;
+    height: 15px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin: 0px;
+    margin-top: -3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 3px;
+}
+
+#open #bouton_depliant img:hover{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -0.5px;
+    padding-left: 3.5px;
+    padding-right: 3.5px;
+    margin-top: -4px;
+}
+
+/* CONTENEUR */
+
+.conteneur{
+    margin: 30px;
+    margin-top: 10px;
+}
+
+.conteneur h1{
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+    margin-top: 20px;
+}

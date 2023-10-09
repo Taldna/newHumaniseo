@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* Programme issu de "Prototype - Contact - Descendant" */
+
+/* 
+Les contacts sont flexibles et se justifient entre eux en fonction de la largeur de la fenêtre.
+Un contact contient une image et des textes qui sont disposés dans un tableau.
+*/
+
+#contacts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contacts .contact{
+    display: grid;
+    width: 400px;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contacts .contact img{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: block;
+    height: 100px;
+    margin: auto;
+}
+
+#contacts .contact aside{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    margin-top : 5px;
+}
+
+#contacts .contact aside p{
+    display: flex;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#contacts .contact aside p img{
+    height: 30px;
+    width: 30px;
+    margin-top: -6.5px;
+    margin-left: 0px;
+    margin-right: 5px;
+}
